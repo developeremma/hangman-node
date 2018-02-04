@@ -12,4 +12,5 @@ Inquirer
 https://www.npmjs.com/package/inquirer
 This prompted users for letter to choose
 
+![screenshot](screenshot/app.jpg?raw=true "Hangman")
 
