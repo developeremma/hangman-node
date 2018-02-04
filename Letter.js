@@ -6,4 +6,4 @@
  };
 
  //exports
- module.exports = letter;
+ module.exports = Letter;
