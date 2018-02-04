@@ -1,22 +1,16 @@
 # hangman-node week-11-homework
-The completed game should meet the following criteria:
 
-The completed game should be able to receive user input using the inquirer or prompt npm packages.
+CLI that prompts user for letters to guess in a word of Hangman. The theme of this game was dev technologies. Used a static array to store words. 
 
-Your solution should have, at minimum, three files:
+Third Party NPM Package used:
 
-Letter.js: Contains a constructor, Letter. This constructor should be able to either display an underlying character or a blank placeholder (such as an underscore), depending on whether or not the user has guessed the letter. That means the constructor should define:
+Figlet
+https://www.npmjs.com/package/figlet
+This allowed for a UI in CLI
 
-A string value to store the underlying character for the letter
-A boolean value that stores whether that letter has been guessed yet
-A function that returns the underlying character if the letter has been guessed, or a placeholder (like an underscore) if the letter has not been guessed
-A function that takes a character as an argument and checks it against the underlying character, updating the stored boolean value to true if it was guessed correctly
-Word.js: Contains a constructor, Word that depends on the Letter constructor. This is used to create an object representing the current word the user is attempting to guess. That means the constructor should define:
+Inquirer
+https://www.npmjs.com/package/inquirer
+This prompted users for letter to choose
 
-An array of new Letter objects representing the letters of the underlying word
-A function that returns a string representing the word. This should call the function on each letter object (the first function defined in Letter.js) that displays the character or an underscore and concatenate those together.
-A function that takes a character as an argument and calls the guess function on each letter object (the second function defined in Letter.js)
-index.js: The file containing the logic for the course of the game, which depends on Word.js and:
+![screenshot](screenshot/app.jpg?raw=true "Hangman")
 
-Randomly selects a word and uses the Word constructor to store it
-Prompts the user for each guess and keeps track of the user's remaining guesses
